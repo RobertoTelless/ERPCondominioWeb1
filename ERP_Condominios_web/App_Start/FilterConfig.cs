@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ERP_Condominios_web
+namespace SMS_Presentation
 {
     public class FilterConfig
     {
