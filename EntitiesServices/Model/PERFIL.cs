@@ -24,6 +24,7 @@ namespace EntitiesServices.Model
         public int PERF_CD_ID { get; set; }
         public string PERF_NM_PERFIL { get; set; }
         public string PERF_DS_DESCRICAO { get; set; }
+        public string PERF_SG_SIGLA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PERFIL_FUNCIONALIDADE> PERFIL_FUNCIONALIDADE { get; set; }

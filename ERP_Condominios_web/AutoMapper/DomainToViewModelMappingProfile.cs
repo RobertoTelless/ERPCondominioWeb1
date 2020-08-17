@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using AutoMapper;
 using EntitiesServices.Model;
-using SMS_Presentation.ViewModels;
+using Erp_Condominio.ViewModels;
 
 namespace MvcMapping.Mappers
 {
@@ -20,18 +20,8 @@ namespace MvcMapping.Mappers
             CreateMap<NOTICIA_COMENTARIO, NoticiaComentarioViewModel>();
             CreateMap<NOTIFICACAO, NotificacaoViewModel>();
             CreateMap<TEMPLATE, TemplateViewModel>();
-            CreateMap<ASSINANTE, AssinanteViewModel>();
-            CreateMap<CATEGORIA_CONTATO, CategoriaContatoViewModel>();
             CreateMap<CATEGORIA_NOTIFICACAO, CategoriaNotificacaoViewModel>();
-            CreateMap<CLUBE, ClubeViewModel>();
-            CreateMap<ORIGEM, OrigemViewModel>();
-            CreateMap<PAIS, PaisViewModel>();
-            CreateMap<PROFISSAO, ProfissaoViewModel>();
             CreateMap<UF, UFViewModel>();
-            CreateMap<CONTATO, ContatoViewModel>();
-            CreateMap<GRUPO, GrupoViewModel>();
-            CreateMap<CAMPANHA, CampanhaViewModel>();
-            CreateMap<MENSAGEM, MensagemViewModel>();
         }
     }
 }

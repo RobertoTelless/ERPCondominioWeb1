@@ -22,7 +22,7 @@ namespace EntitiesServices.Model
             this.NOTICIA_TAG = new HashSet<NOTICIA_TAG>();
         }
     
-        public int NOTC_CD_D { get; set; }
+        public int NOTC_CD_ID { get; set; }
         public int COND_CD_ID { get; set; }
         public Nullable<System.DateTime> NOTC_DT_EMISSAO { get; set; }
         public Nullable<System.DateTime> NOTC_DT_VALIDADE { get; set; }

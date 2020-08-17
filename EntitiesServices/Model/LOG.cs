@@ -15,13 +15,15 @@ namespace EntitiesServices.Model
     public partial class LOG
     {
         public int LOG_CD_ID { get; set; }
+        public Nullable<int> COND_CD_ID { get; set; }
         public int USUA_CD_ID { get; set; }
-        public System.DateTime LOG_DT_LOG { get; set; }
-        public string LOG_NM_MODULO { get; set; }
+        public System.DateTime LOG_DT_DATA { get; set; }
+        public string LOG_NM_OPERACAO { get; set; }
         public string LOG_TX_REGISTRO { get; set; }
         public string LOG_TX_REGISTRO_ANTES { get; set; }
         public Nullable<int> LOG_IN_ATIVO { get; set; }
     
+        public virtual CONDOMINIO CONDOMINIO { get; set; }
         public virtual USUARIO USUARIO { get; set; }
     }
 }

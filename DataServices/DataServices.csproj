@@ -111,11 +111,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CategoriaNotificacaoRepository.cs" />
+    <Compile Include="Repositories\ConfiguracaoRepository.cs" />
+    <Compile Include="Repositories\LogRepository.cs" />
+    <Compile Include="Repositories\NoticiaComentarioRepository.cs" />
+    <Compile Include="Repositories\NoticiaRepository.cs" />
+    <Compile Include="Repositories\NotificacaoAnexoRepository.cs" />
+    <Compile Include="Repositories\NotificacaoRepository.cs" />
+    <Compile Include="Repositories\PerfilRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\TemplateRepository.cs" />
+    <Compile Include="Repositories\UFRepository.cs" />
+    <Compile Include="Repositories\UsuarioAnexoRepository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting\CrossCutting.csproj">
+      <Project>{d2324638-b14f-4852-aafd-da6226ab0756}</Project>
+      <Name>CrossCutting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntitiesServices\EntitiesServices.csproj">
       <Project>{f0b047d8-d85c-4914-937c-735847b88e44}</Project>
       <Name>EntitiesServices</Name>

@@ -1,7 +1,7 @@
 using System.Web;
 using System.Web.Optimization;
 
-namespace SMS_Presentation
+namespace ERP_Condominios_web
 {
     public class BundleConfig
     {

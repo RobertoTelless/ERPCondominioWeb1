@@ -21,13 +21,19 @@ namespace EntitiesServices.Model
         }
     
         public int TEMP_CD_ID { get; set; }
-        public string TEMP_CD_CODIGO { get; set; }
+        public Nullable<int> COND_CD_ID { get; set; }
+        public string TEMP_SG_SIGLA { get; set; }
         public string TEMP_NM_NOME { get; set; }
         public string TEMP_AQ_ARQUIVO { get; set; }
         public System.DateTime TEMP_DT_CADASTRO { get; set; }
         public int TEMP_IN_ATIVO { get; set; }
-        public string TEMP_DS_TEMPLATE { get; set; }
+        public string TEMP_TX_CONTEUDO { get; set; }
+        public string TEMP_TX_CONTEUDO_LIMPO { get; set; }
+        public string TEMP_TX_CABECALHO { get; set; }
+        public string TEMP_TX_CORPO { get; set; }
+        public string TEMP_TX_DADOS { get; set; }
     
+        public virtual CONDOMINIO CONDOMINIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NOTIFICACAO> NOTIFICACAO { get; set; }
     }

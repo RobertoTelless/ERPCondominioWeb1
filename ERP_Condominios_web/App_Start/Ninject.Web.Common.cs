@@ -77,22 +77,7 @@ namespace Presentation.Start
             kernel.Bind<INoticiaAppService>().To<NoticiaAppService>();
             kernel.Bind<INotificacaoAppService>().To<NotificacaoAppService>();
             kernel.Bind<ITemplateAppService>().To<TemplateAppService>();
-            kernel.Bind<ICategoriaContatoAppService>().To<CategoriaContatoAppService>();
             kernel.Bind<ICategoriaNotificacaoAppService>().To<CategoriaNotificacaoAppService>();
-            kernel.Bind<IClubeAppService>().To<ClubeAppService>();
-            kernel.Bind<IOrigemAppService>().To<OrigemAppService>();
-            kernel.Bind<IProfissaoAppService>().To<ProfissaoAppService>();
-            kernel.Bind<IAssinanteAppService>().To<AssinanteAppService>();
-            kernel.Bind<IContatoAppService>().To<ContatoAppService>();
-            kernel.Bind<IGrupoAppService>().To<GrupoAppService>();
-            kernel.Bind<IGrupoContatoAppService>().To<GrupoContatoAppService>();
-            kernel.Bind<ICampanhaAppService>().To<CampanhaAppService>();
-            kernel.Bind<ICampanhaContatoAppService>().To<CampanhaContatoAppService>();
-            kernel.Bind<ICampanhaGrupoAppService>().To<CampanhaGrupoAppService>();
-            kernel.Bind<IMensagemAppService>().To<MensagemAppService>();
-            kernel.Bind<IMensagemCampanhaAppService>().To<MensagemCampanhaAppService>();
-            kernel.Bind<IMensagemContatoAppService>().To<MensagemContatoAppService>();
-            kernel.Bind<IMensagemGrupoAppService>().To<MensagemGrupoAppService>();
 
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
             kernel.Bind<IUsuarioService>().To<UsuarioService>();
@@ -102,22 +87,7 @@ namespace Presentation.Start
             kernel.Bind<INotificacaoService>().To<NotificacaoService>();
             kernel.Bind<INoticiaService>().To<NoticiaService>();
             kernel.Bind<ITemplateService>().To<TemplateService>();
-            kernel.Bind<IAssinanteService>().To<AssinanteService>();
-            kernel.Bind<ICategoriaContatoService>().To<CategoriaContatoService>();
             kernel.Bind<ICategoriaNotificacaoService>().To<CategoriaNotificacaoService>();
-            kernel.Bind<IClubeService>().To<ClubeService>();
-            kernel.Bind<IOrigemService>().To<OrigemService>();
-            kernel.Bind<IProfissaoService>().To<ProfissaoService>();
-            kernel.Bind<IContatoService>().To<ContatoService>();
-            kernel.Bind<IGrupoService>().To<GrupoService>();
-            kernel.Bind<IGrupoContatoService>().To<GrupoContatoService>();
-            kernel.Bind<ICampanhaService>().To<CampanhaService>();
-            kernel.Bind<ICampanhaContatoService>().To<CampanhaContatoService>();
-            kernel.Bind<ICampanhaGrupoService>().To<CampanhaGrupoService>();
-            kernel.Bind<IMensagemService>().To<MensagemService>();
-            kernel.Bind<IMensagemCampanhaService>().To<MensagemCampanhaService>();
-            kernel.Bind<IMensagemContatoService>().To<MensagemContatoService>();
-            kernel.Bind<IMensagemGrupoService>().To<MensagemGrupoService>();
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             kernel.Bind<IConfiguracaoRepository>().To<ConfiguracaoRepository>();
@@ -132,23 +102,6 @@ namespace Presentation.Start
             kernel.Bind<INotificacaoAnexoRepository>().To<NotificacaoAnexoRepository>();
             kernel.Bind<IUsuarioAnexoRepository>().To<UsuarioAnexoRepository>();
             kernel.Bind<IUFRepository>().To<UFRepository>();
-            kernel.Bind<IAssinanteRepository>().To<AssinanteRepository>();
-            kernel.Bind<IAssinanteAnexoRepository>().To<AssinanteAnexoRepository>();
-            kernel.Bind<ICategoriaContatoRepository>().To<CategoriaContatoRepository>();
-            kernel.Bind<IClubeRepository>().To<ClubeRepository>();
-            kernel.Bind<IOrigemRepository>().To<OrigemRepository>();
-            kernel.Bind<IProfissaoRepository>().To<ProfissaoRepository>();
-            kernel.Bind<ITemplateEmailRepository>().To<TemplateEmailRepository>();
-            kernel.Bind<IContatoRepository>().To<ContatoRepository>();
-            kernel.Bind<IGrupoRepository>().To<GrupoRepository>();
-            kernel.Bind<IGrupoContatoRepository>().To<GrupoContatoRepository>();
-            kernel.Bind<ICampanhaRepository>().To<CampanhaRepository>();
-            kernel.Bind<ICampanhaContatoRepository>().To<CampanhaContatoRepository>();
-            kernel.Bind<ICampanhaGrupoRepository>().To<CampanhaGrupoRepository>();
-            kernel.Bind<IMensagemRepository>().To<MensagemRepository>();
-            kernel.Bind<IMensagemCampanhaRepository>().To<MensagemCampanhaRepository>();
-            kernel.Bind<IMensagemContatoRepository>().To<MensagemContatoRepository>();
-            kernel.Bind<IMensagemGrupoRepository>().To<MensagemGrupoRepository>();
 
         }
     }

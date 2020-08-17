@@ -36,14 +36,22 @@ namespace EntitiesServices.Model
             this.SOLICITACAO_MUDANCA_MOVIMENTO = new HashSet<SOLICITACAO_MUDANCA_MOVIMENTO>();
             this.USUARIO_ANEXO = new HashSet<USUARIO_ANEXO>();
             this.USUARIO_CONTROLE_ENTRADA = new HashSet<USUARIO_CONTROLE_ENTRADA>();
+            this.TAREFA = new HashSet<TAREFA>();
+            this.TAREFA1 = new HashSet<TAREFA>();
+            this.TAREFA2 = new HashSet<TAREFA>();
+            this.TAREFA3 = new HashSet<TAREFA>();
+            this.TAREFA_ACOMPANHAMENTO = new HashSet<TAREFA_ACOMPANHAMENTO>();
+            this.TAREFA_NOTIFICACAO = new HashSet<TAREFA_NOTIFICACAO>();
         }
     
         public int USUA_CD_ID { get; set; }
         public int COND_CD_ID { get; set; }
+        public Nullable<int> TORR_CD_ID { get; set; }
         public int PERF_CD_ID { get; set; }
         public Nullable<int> UNID_CD_ID { get; set; }
         public Nullable<int> FUCR_CD_ID { get; set; }
         public Nullable<int> MORA_CD_ID { get; set; }
+        public Nullable<int> CARG_CD_ID { get; set; }
         public int USUA_IN_MORADOR { get; set; }
         public int USUA_IN_PROPRIETARIO { get; set; }
         public int USUA_IN_FUNCIONARIO { get; set; }
@@ -69,7 +77,6 @@ namespace EntitiesServices.Model
         public Nullable<System.DateTime> USUA_DT_ULTIMA_FALHA { get; set; }
         public string USUA_NOVA_SENHA { get; set; }
         public string USUA_AQ_FOTO { get; set; }
-        public Nullable<int> TORR_CD_ID { get; set; }
         public string USUA_NM_LOGIN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -78,6 +85,8 @@ namespace EntitiesServices.Model
         public virtual ICollection<AMBIENTE_CHAVE> AMBIENTE_CHAVE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AUTORIZACAO_ACESSO> AUTORIZACAO_ACESSO { get; set; }
+        public virtual CARGO CARGO { get; set; }
+        public virtual CONDOMINIO CONDOMINIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CONTA_PAGAR> CONTA_PAGAR { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -112,5 +121,17 @@ namespace EntitiesServices.Model
         public virtual ICollection<USUARIO_ANEXO> USUARIO_ANEXO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USUARIO_CONTROLE_ENTRADA> USUARIO_CONTROLE_ENTRADA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAREFA> TAREFA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAREFA> TAREFA1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAREFA> TAREFA2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAREFA> TAREFA3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAREFA_ACOMPANHAMENTO> TAREFA_ACOMPANHAMENTO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TAREFA_NOTIFICACAO> TAREFA_NOTIFICACAO { get; set; }
     }
 }

@@ -18,12 +18,16 @@ namespace EntitiesServices.Model
         public CARGO()
         {
             this.FUNCIONARIO = new HashSet<FUNCIONARIO>();
+            this.USUARIO = new HashSet<USUARIO>();
         }
     
         public int CARG_CD_ID { get; set; }
         public string CARG_NM_NOME { get; set; }
+        public Nullable<int> CARG_IN_ATIVO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FUNCIONARIO> FUNCIONARIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<USUARIO> USUARIO { get; set; }
     }
 }
