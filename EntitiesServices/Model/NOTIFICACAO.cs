@@ -40,6 +40,7 @@ namespace EntitiesServices.Model
         public Nullable<int> NOTI_IN_NIVEL { get; set; }
         public Nullable<int> USUA_CD_ID { get; set; }
         public Nullable<System.DateTime> NOTI_DT_LEITURA { get; set; }
+        public Nullable<System.DateTime> NOTI_DT_VISTA { get; set; }
     
         public virtual CATEGORIA_NOTIFICACAO CATEGORIA_NOTIFICACAO { get; set; }
         public virtual CONDOMINIO CONDOMINIO { get; set; }

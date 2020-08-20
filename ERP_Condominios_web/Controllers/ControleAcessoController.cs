@@ -129,6 +129,7 @@ namespace ERP_Condominios_web.Controllers
                 Session["FlagInicial"] = 0;
                 Session["FiltroData"] = 1;
                 Session["FiltroStatus"] = 1;
+                Session["Ativa"] = "1";
 
                 // Route
                 if ((USUARIO)Session["UserCredentials"] != null)
@@ -150,6 +151,7 @@ namespace ERP_Condominios_web.Controllers
             Session["Usuario"] = null;
             Session["IdAssinante"] = null;
             Session["Condominio"] = null;
+            Session["Ativa"] = 0;
             return RedirectToAction("Login", "ControleAcesso");
         }
 

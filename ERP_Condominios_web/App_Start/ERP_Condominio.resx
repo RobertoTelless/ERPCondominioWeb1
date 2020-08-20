@@ -144,6 +144,15 @@
   <data name="M0009" xml:space="preserve">
     <value>A nova senha nao foi confirmada corretamente</value>
   </data>
+  <data name="M0010" xml:space="preserve">
+    <value>Nenhum registro atendeu às condições do filtro especificado</value>
+  </data>
+  <data name="M0011" xml:space="preserve">
+    <value>Nenhum arquivo selecionado</value>
+  </data>
+  <data name="M0012" xml:space="preserve">
+    <value>O nome do arquivo anexado não pode ter mais do que 100 caracteres</value>
+  </data>
   <data name="M0074" xml:space="preserve">
     <value>Nova senha não pode ser em branco</value>
   </data>

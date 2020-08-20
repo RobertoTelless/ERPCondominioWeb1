@@ -1028,6 +1028,7 @@
           <Property Name="NOTI_IN_NIVEL" Type="int" />
           <Property Name="USUA_CD_ID" Type="int" />
           <Property Name="NOTI_DT_LEITURA" Type="datetime" />
+          <Property Name="NOTI_DT_VISTA" Type="datetime" />
         </EntityType>
         <EntityType Name="NOTIFICACAO_ANEXO">
           <Key>
@@ -6652,6 +6653,7 @@
           <NavigationProperty Name="TEMPLATE" Relationship="Self.FK_NOTIFICACAO_TEMPLATE" FromRole="NOTIFICACAO" ToRole="TEMPLATE" />
           <NavigationProperty Name="UNIDADE" Relationship="Self.FK_NOTIFICACAO_UNIDADE" FromRole="NOTIFICACAO" ToRole="UNIDADE" />
           <NavigationProperty Name="USUARIO" Relationship="Self.FK_NOTIFICACAO_USUARIO" FromRole="NOTIFICACAO" ToRole="USUARIO" />
+          <Property Name="NOTI_DT_VISTA" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="NOTIFICACAO_ANEXO">
           <Key>
@@ -12247,6 +12249,7 @@
           <EntitySetMapping Name="NOTIFICACAO">
             <EntityTypeMapping TypeName="Erp_CondominioModel.NOTIFICACAO">
               <MappingFragment StoreEntitySet="NOTIFICACAO">
+                <ScalarProperty Name="NOTI_DT_VISTA" ColumnName="NOTI_DT_VISTA" />
                 <ScalarProperty Name="NOTI_CD_ID" ColumnName="NOTI_CD_ID" />
                 <ScalarProperty Name="UNID_CD_ID" ColumnName="UNID_CD_ID" />
                 <ScalarProperty Name="CANO_CD_ID" ColumnName="CANO_CD_ID" />

@@ -295,6 +295,7 @@
     <Compile Include="Interfaces\Repositories\ITelefoneRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITemplateRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITipoEncomendaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITipoUnidadeRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITipoPessoaRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITipoProdutoRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITipoTarefaRepository.cs" />
@@ -309,6 +310,7 @@
     <Compile Include="Interfaces\Services\ILogService.cs" />
     <Compile Include="Interfaces\Services\ICondominioService.cs" />
     <Compile Include="Interfaces\Services\INoticiaService.cs" />
+    <Compile Include="Interfaces\Services\IUnidadeService.cs" />
     <Compile Include="Interfaces\Services\INotificacaoService.cs" />
     <Compile Include="Interfaces\Services\IPerfilService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
@@ -720,6 +722,7 @@
     <Compile Include="Services\PerfilService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="Services\TemplateService.cs" />
+    <Compile Include="Services\UnidadeService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="WorkClasses\Endereco.cs" />
   </ItemGroup>

@@ -142,6 +142,33 @@ namespace ERP_Condominios_web.App_Start {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nenhum registro atendeu às condições do filtro especificado.
+        /// </summary>
+        internal static string M0010 {
+            get {
+                return ResourceManager.GetString("M0010", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nenhum arquivo selecionado.
+        /// </summary>
+        internal static string M0011 {
+            get {
+                return ResourceManager.GetString("M0011", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O nome do arquivo anexado não pode ter mais do que 100 caracteres.
+        /// </summary>
+        internal static string M0012 {
+            get {
+                return ResourceManager.GetString("M0012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nova senha não pode ser em branco.
         /// </summary>
         internal static string M0074 {

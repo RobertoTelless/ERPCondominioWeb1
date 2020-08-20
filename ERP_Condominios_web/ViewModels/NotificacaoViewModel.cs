@@ -48,6 +48,5 @@ namespace Erp_Condominio.ViewModels
         public virtual TEMPLATE TEMPLATE { get; set; }
         public virtual UNIDADE UNIDADE { get; set; }
         public virtual USUARIO USUARIO { get; set; }
-
     }
 }
