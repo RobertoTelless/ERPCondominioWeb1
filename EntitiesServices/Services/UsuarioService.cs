@@ -26,9 +26,10 @@ namespace ModelServices.EntitiesServices
         private readonly INotificacaoRepository _notRepository;
         private readonly INoticiaRepository _ntcRepository;
         private readonly IUFRepository _ufRepository;
+        private readonly ITipoPessoaRepository _tpRepository;
         protected Erp_CondominioEntities Db = new Erp_CondominioEntities();
 
-        public UsuarioService(IUsuarioRepository usuarioRepository, ILogRepository logRepository, IConfiguracaoRepository configuracaoRepository, IPerfilRepository perfRepository, IUsuarioAnexoRepository anexoRepository, INotificacaoRepository notRepository, INoticiaRepository ntcRepository, ITemplateRepository tempRepository, IUFRepository ufRepository) : base(usuarioRepository)
+        public UsuarioService(IUsuarioRepository usuarioRepository, ILogRepository logRepository, IConfiguracaoRepository configuracaoRepository, IPerfilRepository perfRepository, IUsuarioAnexoRepository anexoRepository, INotificacaoRepository notRepository, INoticiaRepository ntcRepository, ITemplateRepository tempRepository, IUFRepository ufRepository, ITipoPessoaRepository tpRepository) : base(usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
             _logRepository = logRepository;
@@ -39,6 +40,7 @@ namespace ModelServices.EntitiesServices
             _ntcRepository = ntcRepository;
             _tempRepository = tempRepository;
             _ufRepository = ufRepository;
+            _tpRepository = tpRepository;
         }
 
         public USUARIO RetriveUserByEmail(String email)
@@ -104,6 +106,11 @@ namespace ModelServices.EntitiesServices
         public List<UF> GetAllUF()
         {
             return _ufRepository.GetAllItens();
+        }
+
+        public List<TIPO_PESSOA> GetAllTiposPessoa()
+        {
+            return _tpRepository.GetAllItens();
         }
 
         public List<USUARIO> GetAllUsuarios(Int32? idAss)

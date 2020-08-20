@@ -63,6 +63,11 @@ namespace ApplicationServices.Services
             return _usuarioService.GetAllUF();
         }
 
+        public List<TIPO_PESSOA> GetAllTiposPessoa()
+        {
+            return _usuarioService.GetAllTiposPessoa();
+        }
+
         public List<NOTIFICACAO> GetAllItensUser(Int32 id, Int32? idAss)
         {
             return _usuarioService.GetAllItensUser(id, idAss);
@@ -455,7 +460,7 @@ namespace ApplicationServices.Services
                 // Checa senha
                 if (String.IsNullOrEmpty(senha))
                 {
-                    return 9;
+                    return 1;
                 }
                 // Checa login
                 if (String.IsNullOrEmpty(login))

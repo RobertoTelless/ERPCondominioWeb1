@@ -59,5 +59,131 @@ namespace ERP_Condominios_web.App_Start {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Login ou senha não informados.
+        /// </summary>
+        internal static string M0001 {
+            get {
+                return ResourceManager.GetString("M0001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Login inexistente.
+        /// </summary>
+        internal static string M0002 {
+            get {
+                return ResourceManager.GetString("M0002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Usuário inativo.
+        /// </summary>
+        internal static string M0003 {
+            get {
+                return ResourceManager.GetString("M0003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O usuario esta bloqueado. Entre em contato com o administrador do sistema para executar o desbloqueio.
+        /// </summary>
+        internal static string M0004 {
+            get {
+                return ResourceManager.GetString("M0004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O usuario ja efetuou um login com a senha provisoria. Favor gerar outra senha.
+        /// </summary>
+        internal static string M0005 {
+            get {
+                return ResourceManager.GetString("M0005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Numero de falhas de login superior ao limite diario de falhas.
+        /// </summary>
+        internal static string M0006 {
+            get {
+                return ResourceManager.GetString("M0006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Credenciais invalidas.
+        /// </summary>
+        internal static string M0007 {
+            get {
+                return ResourceManager.GetString("M0007", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A nova senha nao pode ser igual a anterior.
+        /// </summary>
+        internal static string M0008 {
+            get {
+                return ResourceManager.GetString("M0008", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A nova senha nao foi confirmada corretamente.
+        /// </summary>
+        internal static string M0009 {
+            get {
+                return ResourceManager.GetString("M0009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nova senha não pode ser em branco.
+        /// </summary>
+        internal static string M0074 {
+            get {
+                return ResourceManager.GetString("M0074", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Confirmação da senha não pode ser em branco.
+        /// </summary>
+        internal static string M0075 {
+            get {
+                return ResourceManager.GetString("M0075", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Você tem notificações não lidas até esta data.
+        /// </summary>
+        internal static string M0093 {
+            get {
+                return ResourceManager.GetString("M0093", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-Mail inválido.
+        /// </summary>
+        internal static string M0109 {
+            get {
+                return ResourceManager.GetString("M0109", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-Mail não cadastrado.
+        /// </summary>
+        internal static string M0110 {
+            get {
+                return ResourceManager.GetString("M0110", resourceCulture);
+            }
+        }
     }
 }

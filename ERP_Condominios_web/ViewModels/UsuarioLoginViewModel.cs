@@ -35,7 +35,7 @@ namespace Erp_Condominio.ViewModels
         [StringLength(10, MinimumLength = 1, ErrorMessage = "A CONFIRMAÇÃO DE SENHA deve ter no minimo 1 caractere e no máximo 10.")]
         public string USUA_NM_SENHA_CONFIRMA { get; set; }
         [StringLength(10, MinimumLength = 1, ErrorMessage = "A NOVA SENHA deve ter no minimo 1 caractere e no máximo 10.")]
-        public string USUA_NM_NOVA_SENHA { get; set; }
+        public string USUA_NOVA_SENHA { get; set; }
         public int USUA_IN_BLOQUEADO { get; set; }
         public int USUA_IN_LOGIN_PROVISORIO { get; set; }
         public int USUA_IN_ATIVO { get; set; }
@@ -57,7 +57,6 @@ namespace Erp_Condominio.ViewModels
         public string USUA_NR_CPF { get; set; }
         public byte[] USUA_IM_DIGITAL { get; set; }
         public int USUA_IN_PROVISORIA { get; set; }
-        public string USUA_NOVA_SENHA { get; set; }
 
         public bool Bloqueio
         {

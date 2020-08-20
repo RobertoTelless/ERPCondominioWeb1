@@ -34,6 +34,7 @@ namespace ModelServices.Interfaces.EntitiesServices
         List<NOTIFICACAO> GetNotificacaoNovas(Int32 id, Int32? idAss);
         List<NOTICIA> GetAllNoticias();
         List<UF> GetAllUF();
+        List<TIPO_PESSOA> GetAllTiposPessoa();
         USUARIO GetAdministrador(Int32? idAss);
         TEMPLATE GetTemplate(String code, Int32? idAss);
         TEMPLATE GetTemplate(String code);

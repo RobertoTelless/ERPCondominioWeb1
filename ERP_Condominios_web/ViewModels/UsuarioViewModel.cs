@@ -37,7 +37,7 @@ namespace Erp_Condominio.ViewModels
         [Required(ErrorMessage = "Campo CONFIRMAÇÃO DE SENHA obrigatorio")]
         public string USUA_NM_SENHA_CONFIRMA { get; set; }
         [StringLength(10, MinimumLength = 1, ErrorMessage = "O SENHA deve ter no minimo 1 caractere e no máximo 10.")]
-        public string USUA_NM_NOVA_SENHA { get; set; }
+        public string USUA_NOVA_SENHA { get; set; }
         public int USUA_IN_BLOQUEADO { get; set; }
         public int USUA_IN_LOGIN_PROVISORIO { get; set; }
         public int USUA_IN_MORADOR { get; set; }

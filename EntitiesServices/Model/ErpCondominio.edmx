@@ -217,6 +217,7 @@
           <Property Name="CONF_NR_DIAS_PATRIMONIO" Type="int" />
           <Property Name="CONF_NR_DIAS_ATENDIMENTO" Type="int" />
           <Property Name="CONF_NR_REFRESH_DASH" Type="int" />
+          <Property Name="CONF_NM_ARQUIVO_ALARME" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="CONTA_BANCO">
           <Key>
@@ -5669,6 +5670,7 @@
           <Property Name="CONF_NR_DIAS_ATENDIMENTO" Type="Int32" />
           <Property Name="CONF_NR_REFRESH_DASH" Type="Int32" />
           <NavigationProperty Name="CONDOMINIO" Relationship="Self.FK_CONFIGURACAO_CONDOMINIO" FromRole="CONFIGURACAO" ToRole="CONDOMINIO" />
+          <Property Name="CONF_NM_ARQUIVO_ALARME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="CONTA_BANCO">
           <Key>
@@ -11391,6 +11393,7 @@
           <EntitySetMapping Name="CONFIGURACAO">
             <EntityTypeMapping TypeName="Erp_CondominioModel.CONFIGURACAO">
               <MappingFragment StoreEntitySet="CONFIGURACAO">
+                <ScalarProperty Name="CONF_NM_ARQUIVO_ALARME" ColumnName="CONF_NM_ARQUIVO_ALARME" />
                 <ScalarProperty Name="CONF_CD_ID" ColumnName="CONF_CD_ID" />
                 <ScalarProperty Name="COND_CD_ID" ColumnName="COND_CD_ID" />
                 <ScalarProperty Name="CONF_NR_FALHAS_DIA" ColumnName="CONF_NR_FALHAS_DIA" />

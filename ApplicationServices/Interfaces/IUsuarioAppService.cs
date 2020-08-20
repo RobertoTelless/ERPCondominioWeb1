@@ -37,5 +37,6 @@ namespace ApplicationServices.Interfaces
         List<NOTICIA> GetAllNoticias();
         List<UF> GetAllUF();
         List<USUARIO> GetAllUsuariosAdm();
+        List<TIPO_PESSOA> GetAllTiposPessoa();
     }
 }

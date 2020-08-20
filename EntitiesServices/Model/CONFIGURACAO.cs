@@ -26,6 +26,7 @@ namespace EntitiesServices.Model
         public Nullable<int> CONF_NR_DIAS_PATRIMONIO { get; set; }
         public Nullable<int> CONF_NR_DIAS_ATENDIMENTO { get; set; }
         public Nullable<int> CONF_NR_REFRESH_DASH { get; set; }
+        public string CONF_NM_ARQUIVO_ALARME { get; set; }
     
         public virtual CONDOMINIO CONDOMINIO { get; set; }
     }

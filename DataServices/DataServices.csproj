@@ -115,6 +115,7 @@
     <Compile Include="Repositories\ConfiguracaoRepository.cs" />
     <Compile Include="Repositories\LogRepository.cs" />
     <Compile Include="Repositories\NoticiaComentarioRepository.cs" />
+    <Compile Include="Repositories\CondominioRepository.cs" />
     <Compile Include="Repositories\NoticiaRepository.cs" />
     <Compile Include="Repositories\NotificacaoAnexoRepository.cs" />
     <Compile Include="Repositories\NotificacaoRepository.cs" />
