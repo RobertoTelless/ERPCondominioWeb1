@@ -12,16 +12,16 @@ namespace EntitiesServices.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class USUARIO_ANEXO
+    public partial class FUNCIONARIO_ANEXO
     {
-        public int USAN_CD_ID { get; set; }
-        public int USUA_CD_ID { get; set; }
-        public string USAN_NM_TITULO { get; set; }
-        public System.DateTime USAN_DT_ANEXO { get; set; }
-        public int USAN_IN_TIPO { get; set; }
-        public int USAN_IN_ATIVO { get; set; }
-        public string USAN_AQ_ARQUIVO { get; set; }
+        public int FUAN_CD_ID { get; set; }
+        public int FUCR_CD_ID { get; set; }
+        public string FUAN_NM_TITULO { get; set; }
+        public System.DateTime FUAN_DT_ANEXO { get; set; }
+        public int FUAN_IN_TIPO { get; set; }
+        public string FUAN_AQ_ARQUIVO { get; set; }
+        public int FUAN_IN_ATIVO { get; set; }
     
-        public virtual USUARIO USUARIO { get; set; }
+        public virtual FUNCIONARIO FUNCIONARIO { get; set; }
     }
 }

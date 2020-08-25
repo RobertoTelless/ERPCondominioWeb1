@@ -78,6 +78,7 @@ namespace EntitiesServices.Model
         public string USUA_NOVA_SENHA { get; set; }
         public string USUA_AQ_FOTO { get; set; }
         public string USUA_NM_LOGIN { get; set; }
+        public string USUA_TX_OBSERVACOES { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AGENDA> AGENDA { get; set; }

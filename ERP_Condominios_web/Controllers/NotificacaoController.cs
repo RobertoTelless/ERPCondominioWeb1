@@ -198,6 +198,7 @@ namespace ERP_Condominios_web.Controllers
                 {
                     Session["MensNotificacao"] = 1;
                     ModelState.AddModelError("", ERP_Condominio.ResourceManager.GetString("M0010", CultureInfo.CurrentCulture));
+                    return RedirectToAction("MontarTelaNotificacao");
                 }
 
                 // Sucesso
@@ -387,6 +388,7 @@ namespace ERP_Condominios_web.Controllers
                     {
                         Session["MensNotificacao"] = 1;
                         ModelState.AddModelError("", ERP_Condominio.ResourceManager.GetString("M0010", CultureInfo.CurrentCulture));
+                        return RedirectToAction("MontarTelaNotificacao");
                     }
 
                     // Sucesso

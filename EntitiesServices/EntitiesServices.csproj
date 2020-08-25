@@ -269,6 +269,7 @@
     <Compile Include="Interfaces\Repositories\IFinalidadeReservaRepository.cs" />
     <Compile Include="Interfaces\Repositories\IFormaEntregaRepository.cs" />
     <Compile Include="Interfaces\Repositories\IFornecedorRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFuncionarioAnexoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IFuncionarioAtivoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IFuncionarioRepository.cs" />
     <Compile Include="Interfaces\Repositories\IGrauParentescoRepository.cs" />
@@ -305,6 +306,7 @@
     <Compile Include="Interfaces\Repositories\IUsuarioAnexoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IUsuarioRepository.cs" />
     <Compile Include="Interfaces\Repositories\IVeiculoRepository.cs" />
+    <Compile Include="Interfaces\Services\ICargoService.cs" />
     <Compile Include="Interfaces\Services\ICategoriaNotificacaoService.cs" />
     <Compile Include="Interfaces\Services\IConfiguracaoService.cs" />
     <Compile Include="Interfaces\Services\ILogService.cs" />
@@ -485,6 +487,9 @@
       <DependentUpon>ErpCondominio.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\FUNCIONARIO.cs">
+      <DependentUpon>ErpCondominio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FUNCIONARIO_ANEXO.cs">
       <DependentUpon>ErpCondominio.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\FUNCIONARIO_ATIVO.cs">
@@ -713,6 +718,7 @@
       <DependentUpon>ErpCondominio.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CargoService.cs" />
     <Compile Include="Services\CategoriaNotificacaoService.cs" />
     <Compile Include="Services\ConfiguracaoService.cs" />
     <Compile Include="Services\LogService.cs" />

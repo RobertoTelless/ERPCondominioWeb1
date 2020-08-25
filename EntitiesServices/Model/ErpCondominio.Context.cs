@@ -152,5 +152,6 @@ namespace EntitiesServices.Model
         public virtual DbSet<TAREFA_ANEXO> TAREFA_ANEXO { get; set; }
         public virtual DbSet<TAREFA_NOTIFICACAO> TAREFA_NOTIFICACAO { get; set; }
         public virtual DbSet<TIPO_TAREFA> TIPO_TAREFA { get; set; }
+        public virtual DbSet<FUNCIONARIO_ANEXO> FUNCIONARIO_ANEXO { get; set; }
     }
 }

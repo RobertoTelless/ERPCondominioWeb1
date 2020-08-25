@@ -153,6 +153,15 @@
   <data name="M0012" xml:space="preserve">
     <value>O nome do arquivo anexado não pode ter mais do que 100 caracteres</value>
   </data>
+  <data name="M0013" xml:space="preserve">
+    <value>E-Mail já existente</value>
+  </data>
+  <data name="M0014" xml:space="preserve">
+    <value>Login já existente</value>
+  </data>
+  <data name="M0015" xml:space="preserve">
+    <value>Extensão inválida</value>
+  </data>
   <data name="M0074" xml:space="preserve">
     <value>Nova senha não pode ser em branco</value>
   </data>

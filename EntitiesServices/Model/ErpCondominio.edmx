@@ -791,6 +791,18 @@
           <Property Name="FUCR_NM_FOTO" Type="varchar" MaxLength="50" />
           <Property Name="USUA_CD_ID" Type="int" />
         </EntityType>
+        <EntityType Name="FUNCIONARIO_ANEXO">
+          <Key>
+            <PropertyRef Name="FUAN_CD_ID" />
+          </Key>
+          <Property Name="FUAN_CD_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FUCR_CD_ID" Type="int" Nullable="false" />
+          <Property Name="FUAN_NM_TITULO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FUAN_DT_ANEXO" Type="date" Nullable="false" />
+          <Property Name="FUAN_IN_TIPO" Type="int" Nullable="false" />
+          <Property Name="FUAN_AQ_ARQUIVO" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="FUAN_IN_ATIVO" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="FUNCIONARIO_ATIVO">
           <Key>
             <PropertyRef Name="FUAT_CD_ID" />
@@ -1640,6 +1652,7 @@
           <Property Name="USUA_NOVA_SENHA" Type="varchar" MaxLength="50" />
           <Property Name="USUA_AQ_FOTO" Type="varchar" MaxLength="250" />
           <Property Name="USUA_NM_LOGIN" Type="varchar" MaxLength="50" />
+          <Property Name="USUA_TX_OBSERVACOES" Type="text" />
         </EntityType>
         <EntityType Name="USUARIO_ANEXO">
           <Key>
@@ -1651,6 +1664,7 @@
           <Property Name="USAN_DT_ANEXO" Type="date" Nullable="false" />
           <Property Name="USAN_IN_TIPO" Type="int" Nullable="false" />
           <Property Name="USAN_IN_ATIVO" Type="int" Nullable="false" />
+          <Property Name="USAN_AQ_ARQUIVO" Type="varchar" MaxLength="250" Nullable="false" />
         </EntityType>
         <EntityType Name="USUARIO_CONTROLE_ENTRADA">
           <Key>
@@ -2884,6 +2898,18 @@
             </Principal>
             <Dependent Role="FORNECEDOR">
               <PropertyRef Name="UF_CD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FUNCIONARIO_ANEXO_FUNCIONARIO">
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="1" />
+          <End Role="FUNCIONARIO_ANEXO" Type="Self.FUNCIONARIO_ANEXO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="FUCR_CD_ID" />
+            </Principal>
+            <Dependent Role="FUNCIONARIO_ANEXO">
+              <PropertyRef Name="FUCR_CD_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4416,6 +4442,7 @@
           <EntitySet Name="FUNCAO_CORPO_DIRETIVO" EntityType="Self.FUNCAO_CORPO_DIRETIVO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FUNCIONALIDADE" EntityType="Self.FUNCIONALIDADE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FUNCIONARIO" EntityType="Self.FUNCIONARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FUNCIONARIO_ANEXO" EntityType="Self.FUNCIONARIO_ANEXO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FUNCIONARIO_ATIVO" EntityType="Self.FUNCIONARIO_ATIVO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GRAU_PARENTESCO" EntityType="Self.GRAU_PARENTESCO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GRUPO" EntityType="Self.GRUPO" Schema="dbo" store:Type="Tables" />
@@ -4874,6 +4901,10 @@
           <AssociationSet Name="FK_FORNECEDOR_UF" Association="Self.FK_FORNECEDOR_UF">
             <End Role="UF" EntitySet="UF" />
             <End Role="FORNECEDOR" EntitySet="FORNECEDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FUNCIONARIO_ANEXO_FUNCIONARIO" Association="Self.FK_FUNCIONARIO_ANEXO_FUNCIONARIO">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="FUNCIONARIO_ANEXO" EntitySet="FUNCIONARIO_ANEXO" />
           </AssociationSet>
           <AssociationSet Name="FK_FUNCIONARIO_ATIVO_CONDOMINIO" Association="Self.FK_FUNCIONARIO_ATIVO_CONDOMINIO">
             <End Role="CONDOMINIO" EntitySet="CONDOMINIO" />
@@ -6359,6 +6390,7 @@
           <NavigationProperty Name="SEXO" Relationship="Self.FK_FUNCIONARIO_SEXO" FromRole="FUNCIONARIO" ToRole="SEXO" />
           <NavigationProperty Name="TIPO_SALARIO" Relationship="Self.FK_FUNCIONARIO_TIPO_SALARIO" FromRole="FUNCIONARIO" ToRole="TIPO_SALARIO" />
           <NavigationProperty Name="VINCULO_EMPREGATICIO" Relationship="Self.FK_FUNCIONARIO_VINCULO_EMPREGATICIO" FromRole="FUNCIONARIO" ToRole="VINCULO_EMPREGATICIO" />
+          <NavigationProperty Name="FUNCIONARIO_ANEXO" Relationship="Erp_CondominioModel.FK_FUNCIONARIO_ANEXO_FUNCIONARIO" FromRole="FUNCIONARIO" ToRole="FUNCIONARIO_ANEXO" />
         </EntityType>
         <EntityType Name="FUNCIONARIO_ATIVO">
           <Key>
@@ -7350,6 +7382,7 @@
           <NavigationProperty Name="TAREFA3" Relationship="Erp_CondominioModel.FK_TAREFA_USUARIO3" FromRole="USUARIO" ToRole="TAREFA" />
           <NavigationProperty Name="TAREFA_ACOMPANHAMENTO" Relationship="Erp_CondominioModel.FK_TAREFA_ACOMPANHAMENTO_USUARIO" FromRole="USUARIO" ToRole="TAREFA_ACOMPANHAMENTO" />
           <NavigationProperty Name="TAREFA_NOTIFICACAO" Relationship="Erp_CondominioModel.FK_TAREFA_NOTIFICACAO_USUARIO" FromRole="USUARIO" ToRole="TAREFA_NOTIFICACAO" />
+          <Property Name="USUA_TX_OBSERVACOES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="USUARIO_ANEXO">
           <Key>
@@ -7362,6 +7395,7 @@
           <Property Name="USAN_IN_TIPO" Type="Int32" Nullable="false" />
           <Property Name="USAN_IN_ATIVO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="USUARIO" Relationship="Self.FK_USUARIO_ANEXO_USUARIO" FromRole="USUARIO_ANEXO" ToRole="USUARIO" />
+          <Property Name="USAN_AQ_ARQUIVO" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="USUARIO_CONTROLE_ENTRADA">
           <Key>
@@ -10948,6 +10982,11 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="TAREFA_NOTIFICACAO" EntitySet="TAREFA_NOTIFICACAO" />
           </AssociationSet>
+          <EntitySet Name="FUNCIONARIO_ANEXO" EntityType="Erp_CondominioModel.FUNCIONARIO_ANEXO" />
+          <AssociationSet Name="FK_FUNCIONARIO_ANEXO_FUNCIONARIO" Association="Erp_CondominioModel.FK_FUNCIONARIO_ANEXO_FUNCIONARIO">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="FUNCIONARIO_ANEXO" EntitySet="FUNCIONARIO_ANEXO" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="TAREFA">
           <Key>
@@ -11170,6 +11209,31 @@
             </Principal>
             <Dependent Role="TAREFA_NOTIFICACAO">
               <PropertyRef Name="USUA_CD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="FUNCIONARIO_ANEXO">
+          <Key>
+            <PropertyRef Name="FUAN_CD_ID" />
+          </Key>
+          <Property Name="FUAN_CD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FUCR_CD_ID" Type="Int32" Nullable="false" />
+          <Property Name="FUAN_NM_TITULO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FUAN_DT_ANEXO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FUAN_IN_TIPO" Type="Int32" Nullable="false" />
+          <Property Name="FUAN_AQ_ARQUIVO" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="FUAN_IN_ATIVO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="FUNCIONARIO" Relationship="Erp_CondominioModel.FK_FUNCIONARIO_ANEXO_FUNCIONARIO" FromRole="FUNCIONARIO_ANEXO" ToRole="FUNCIONARIO" />
+        </EntityType>
+        <Association Name="FK_FUNCIONARIO_ANEXO_FUNCIONARIO">
+          <End Type="Erp_CondominioModel.FUNCIONARIO" Role="FUNCIONARIO" Multiplicity="1" />
+          <End Type="Erp_CondominioModel.FUNCIONARIO_ANEXO" Role="FUNCIONARIO_ANEXO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="FUCR_CD_ID" />
+            </Principal>
+            <Dependent Role="FUNCIONARIO_ANEXO">
+              <PropertyRef Name="FUCR_CD_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -12828,6 +12892,7 @@
           <EntitySetMapping Name="USUARIO">
             <EntityTypeMapping TypeName="Erp_CondominioModel.USUARIO">
               <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="USUA_TX_OBSERVACOES" ColumnName="USUA_TX_OBSERVACOES" />
                 <ScalarProperty Name="USUA_CD_ID" ColumnName="USUA_CD_ID" />
                 <ScalarProperty Name="COND_CD_ID" ColumnName="COND_CD_ID" />
                 <ScalarProperty Name="TORR_CD_ID" ColumnName="TORR_CD_ID" />
@@ -12868,6 +12933,7 @@
           <EntitySetMapping Name="USUARIO_ANEXO">
             <EntityTypeMapping TypeName="Erp_CondominioModel.USUARIO_ANEXO">
               <MappingFragment StoreEntitySet="USUARIO_ANEXO">
+                <ScalarProperty Name="USAN_AQ_ARQUIVO" ColumnName="USAN_AQ_ARQUIVO" />
                 <ScalarProperty Name="USAN_CD_ID" ColumnName="USAN_CD_ID" />
                 <ScalarProperty Name="USUA_CD_ID" ColumnName="USUA_CD_ID" />
                 <ScalarProperty Name="USAN_NM_TITULO" ColumnName="USAN_NM_TITULO" />
@@ -13033,6 +13099,19 @@
                 <ScalarProperty Name="TITR_NM_NOME" ColumnName="TITR_NM_NOME" />
                 <ScalarProperty Name="COND_CD_ID" ColumnName="COND_CD_ID" />
                 <ScalarProperty Name="TITR_CD_ID" ColumnName="TITR_CD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUNCIONARIO_ANEXO">
+            <EntityTypeMapping TypeName="Erp_CondominioModel.FUNCIONARIO_ANEXO">
+              <MappingFragment StoreEntitySet="FUNCIONARIO_ANEXO">
+                <ScalarProperty Name="FUAN_IN_ATIVO" ColumnName="FUAN_IN_ATIVO" />
+                <ScalarProperty Name="FUAN_AQ_ARQUIVO" ColumnName="FUAN_AQ_ARQUIVO" />
+                <ScalarProperty Name="FUAN_IN_TIPO" ColumnName="FUAN_IN_TIPO" />
+                <ScalarProperty Name="FUAN_DT_ANEXO" ColumnName="FUAN_DT_ANEXO" />
+                <ScalarProperty Name="FUAN_NM_TITULO" ColumnName="FUAN_NM_TITULO" />
+                <ScalarProperty Name="FUCR_CD_ID" ColumnName="FUCR_CD_ID" />
+                <ScalarProperty Name="FUAN_CD_ID" ColumnName="FUAN_CD_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -22,6 +22,7 @@ namespace EntitiesServices.Model
             this.DOCUMENTO = new HashSet<DOCUMENTO>();
             this.ENCOMENDA = new HashSet<ENCOMENDA>();
             this.FUNCIONARIO_ATIVO = new HashSet<FUNCIONARIO_ATIVO>();
+            this.FUNCIONARIO_ANEXO = new HashSet<FUNCIONARIO_ANEXO>();
         }
     
         public int FUCR_CD_ID { get; set; }
@@ -114,5 +115,7 @@ namespace EntitiesServices.Model
         public virtual SEXO SEXO { get; set; }
         public virtual TIPO_SALARIO TIPO_SALARIO { get; set; }
         public virtual VINCULO_EMPREGATICIO VINCULO_EMPREGATICIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FUNCIONARIO_ANEXO> FUNCIONARIO_ANEXO { get; set; }
     }
 }

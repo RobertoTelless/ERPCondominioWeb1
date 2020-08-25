@@ -351,6 +351,8 @@
         <AssociationConnector Association="Erp_CondominioModel.FK_TAREFA_USUARIO3" />
         <AssociationConnector Association="Erp_CondominioModel.FK_TAREFA_ACOMPANHAMENTO_USUARIO" />
         <AssociationConnector Association="Erp_CondominioModel.FK_TAREFA_NOTIFICACAO_USUARIO" />
+        <EntityTypeShape EntityType="Erp_CondominioModel.FUNCIONARIO_ANEXO" Width="1.5" PointX="12.75" PointY="113.625" />
+        <AssociationConnector Association="Erp_CondominioModel.FK_FUNCIONARIO_ANEXO_FUNCIONARIO" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

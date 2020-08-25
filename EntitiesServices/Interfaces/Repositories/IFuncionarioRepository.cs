@@ -9,11 +9,11 @@ namespace ModelServices.Interfaces.Repositories
 {
     public interface IFuncionarioRepository : IRepositoryBase<FUNCIONARIO>
     {
-        List<FUNCIONARIO> GetAllItens();
+        FUNCIONARIO CheckExist(FUNCIONARIO item);
         FUNCIONARIO GetByNome(String nome);
-        FUNCIONARIO GetByCPF(String cpf);
-        //List<FUNCIONARIO> ExecuteFilter(String nome, String cpf, String email, Int32? unidadeId);
-        FUNCIONARIO GetItemByID(Int32 id);
-        List<FUNCIONARIO> GetAllPortaria();
+        FUNCIONARIO GetItemById(Int32 id);
+        List<FUNCIONARIO> GetAllItens();
+        List<FUNCIONARIO> GetAllItensAdm();
+        List<FUNCIONARIO> ExecuteFilter(Int32? sitId, String nome, String cpf, String rg, Int32? funId);
     }
 }

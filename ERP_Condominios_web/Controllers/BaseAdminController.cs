@@ -21,7 +21,7 @@ namespace ERP_Condominios_web.Controllers
         private readonly INoticiaAppService notiApp;
         private readonly ILogAppService logApp;
         private readonly INotificacaoAppService notfApp;
-        //private readonly ICargoAppService carApp;
+        private readonly ICargoAppService carApp;
         private readonly IUsuarioAppService usuApp;
         //private readonly ICentroCustoAppService cuApp;
         private readonly IConfiguracaoAppService confApp;
@@ -32,7 +32,7 @@ namespace ERP_Condominios_web.Controllers
         USUARIO objetoAntes = new USUARIO();
         List<USUARIO> listaMaster = new List<USUARIO>();
 
-        public BaseAdminController(IUsuarioAppService baseApps, ILogAppService logApps, INoticiaAppService notApps, INotificacaoAppService notfApps, IUsuarioAppService usuApps, IConfiguracaoAppService confApps)
+        public BaseAdminController(IUsuarioAppService baseApps, ILogAppService logApps, INoticiaAppService notApps, INotificacaoAppService notfApps, IUsuarioAppService usuApps, IConfiguracaoAppService confApps, ICargoAppService carApps)
         {
             baseApp = baseApps;
             logApp = logApps;
@@ -40,6 +40,7 @@ namespace ERP_Condominios_web.Controllers
             notfApp = notfApps;
             usuApp = usuApps;
             confApp = confApps;
+            carApp = carApps;
         }
 
         public ActionResult CarregarAdmin()
@@ -99,6 +100,7 @@ namespace ERP_Condominios_web.Controllers
             Session["Usuarios"] = usuApp.GetAllUsuarios(idAss);
             Session["UFs"] = baseApp.GetAllUF();
             Session["TiposPessoa"] = baseApp.GetAllTiposPessoa();
+            Session["Cargos"] = carApp.GetAllItens();
 
             Session["ListaUsuario"] = null;
             Session["MensUsuario"] = 0;
@@ -110,6 +112,7 @@ namespace ERP_Condominios_web.Controllers
             Session["MensNotificacao"] = 0;
             Session["VoltaNotificacao"] = 1;
             Session["ListaNotificacao"] = null;
+            Session["IdVolta"] = 0;
 
             UsuarioViewModel vm = Mapper.Map<USUARIO, UsuarioViewModel>(usu);
 

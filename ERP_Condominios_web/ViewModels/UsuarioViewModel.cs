@@ -63,7 +63,7 @@ namespace Erp_Condominio.ViewModels
         public string USUA_NR_CPF { get; set; }
         public byte[] USUA_IM_DIGITAL { get; set; }
         public int USUA_IN_PROVISORIA { get; set; }
-        public string USUA_NOVA_SENHA { get; set; }
+        public string USUA_TX_OBSERVACOES { get; set; }
 
         public bool Bloqueio
         {

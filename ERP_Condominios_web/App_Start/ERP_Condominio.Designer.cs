@@ -169,6 +169,33 @@ namespace ERP_Condominios_web.App_Start {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-Mail já existente.
+        /// </summary>
+        internal static string M0013 {
+            get {
+                return ResourceManager.GetString("M0013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Login já existente.
+        /// </summary>
+        internal static string M0014 {
+            get {
+                return ResourceManager.GetString("M0014", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Extensão inválida.
+        /// </summary>
+        internal static string M0015 {
+            get {
+                return ResourceManager.GetString("M0015", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nova senha não pode ser em branco.
         /// </summary>
         internal static string M0074 {

@@ -193,6 +193,7 @@ namespace ERP_Condominios_web.Controllers
                 {
                     Session["MensNoticia"] = 1;
                     ModelState.AddModelError("", ERP_Condominio.ResourceManager.GetString("M0010", CultureInfo.CurrentCulture));
+                    return RedirectToAction("MontarTelaNoticia");
                 }
 
                 // Sucesso
@@ -327,6 +328,7 @@ namespace ERP_Condominios_web.Controllers
                 {
                     Session["MensNoticia"] = 1;
                     ModelState.AddModelError("", ERP_Condominio.ResourceManager.GetString("M0010", CultureInfo.CurrentCulture));
+                    return RedirectToAction("MontarTelaNoticia");
                 }
 
                 // Sucesso
